@@ -48,7 +48,7 @@ brew bundle --file Brewfile.apps.git
 brew bundle --file Brewfile.apps.media
 
 # Games
-brew bundle --file Brewfile.games
+brew bundle --file Brewfile.gaming
 ```
 
 ### Avoiding dependencies
