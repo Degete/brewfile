@@ -16,44 +16,51 @@ brew bundle
 # Selective packages by categories
 
 # Fonts
-brew bundle --file fonts.Brewfile
+brew bundle --file fonts.Brewfile             # Monospace and Nerd Fonts
+
+# Terminal
+brew bundle --file term.emulators.Brewfile    # Terminal emulators
+brew bundle --file term.shells.Brewfile       # Shells, prompt, history, multiplexers
 
 # CLI
-brew bundle --file cli.Brewfile
-brew bundle --file cli.editors.Brewfile
-brew bundle --file cli.file-managers.Brewfile
-brew bundle --file cli.git.Brewfile
-brew bundle --file cli.mail.Brewfile
-brew bundle --file cli.media.Brewfile
-brew bundle --file cli.monitoring.Brewfile
-brew bundle --file cli.network.Brewfile
-brew bundle --file cli.search.Brewfile
-brew bundle --file cli.shells.Brewfile
-brew bundle --file cli.terminals.Brewfile
-brew bundle --file cli.text-generators.Brewfile
+brew bundle --file cli.gnu.Brewfile           # GNU tools, curl/wget, archives, basic utilities
+brew bundle --file cli.modern.Brewfile        # Modern replacements (cat, ls, find, grep, du, ps...)
+brew bundle --file cli.files.Brewfile         # File managers, sync, transfer and backup
+brew bundle --file cli.data.Brewfile          # JSON/YAML, documents, images, log and hex viewers
+brew bundle --file cli.media.Brewfile         # Players, ffmpeg, downloaders
+brew bundle --file cli.system.Brewfile        # Monitoring, system info, macOS helpers
+brew bundle --file cli.security.Brewfile      # GPG and password manager CLI
+brew bundle --file cli.chat.Brewfile          # IRC and email clients
+brew bundle --file cli.fun.Brewfile           # ASCII art and toys
 
 # Development
-brew bundle --file dev.ai.Brewfile
-brew bundle --file dev.android.Brewfile
-brew bundle --file dev.api.Brewfile
-brew bundle --file dev.db.Brewfile
-brew bundle --file dev.devops.Brewfile
-brew bundle --file dev.forensic.Brewfile
-brew bundle --file dev.ides.Brewfile
-brew bundle --file dev.ios.Brewfile
-brew bundle --file dev.languages.Brewfile
-brew bundle --file dev.security.Brewfile
-brew bundle --file dev.virtualization.Brewfile
+brew bundle --file dev.editors.Brewfile       # Terminal and GUI editors
+brew bundle --file dev.git.Brewfile           # Git, GitHub, diffs, clients
+brew bundle --file dev.tools.Brewfile         # Task runners, file watchers, benchmarking
+brew bundle --file dev.languages.Brewfile     # Languages, version managers, linters
+brew bundle --file dev.ai.Brewfile            # Local models, coding agents, AI apps
+brew bundle --file dev.api.Brewfile           # HTTP/gRPC clients and debugging proxies
+brew bundle --file dev.db.Brewfile            # Databases and clients
+brew bundle --file dev.ios.Brewfile           # Xcode and Apple platforms
+brew bundle --file dev.android.Brewfile       # Android
+brew bundle --file dev.containers.Brewfile    # Docker and Kubernetes
+brew bundle --file dev.infra.Brewfile         # Ansible, Terraform, cloud CLIs, secrets, CI/CD
+brew bundle --file dev.network.Brewfile       # Network analysis, diagnostics, tunnels
+brew bundle --file dev.security.Brewfile      # Reverse engineering, password cracking, WiFi
+brew bundle --file dev.vm.Brewfile            # Virtual machines and disk images
 
 # Apps
-brew bundle --file apps.browsers.Brewfile
-brew bundle --file apps.design.Brewfile
-brew bundle --file apps.games.Brewfile
-brew bundle --file apps.git.Brewfile
-brew bundle --file apps.macos.Brewfile
-brew bundle --file apps.media.Brewfile
-brew bundle --file apps.office.Brewfile
-brew bundle --file apps.sns.Brewfile
+brew bundle --file apps.browsers.Brewfile     # Web browsers and Safari extensions
+brew bundle --file apps.chat.Brewfile         # Messaging and video calls
+brew bundle --file apps.design.Brewfile       # 3D, vector, painting, image editing, game engine
+brew bundle --file apps.desktop.Brewfile      # Launchers, window managers, menu bar, keyboard
+brew bundle --file apps.games.Brewfile        # Stores, launchers, emulators, controllers
+brew bundle --file apps.media.Brewfile        # eBooks, players, music, video editing
+brew bundle --file apps.network.Brewfile      # VPN, FTP, file sharing, torrent
+brew bundle --file apps.office.Brewfile       # PDF readers, iWork, office suites
+brew bundle --file apps.productivity.Brewfile # Notes, languages, dictation
+brew bundle --file apps.security.Brewfile     # Password manager and firewall
+brew bundle --file apps.utilities.Brewfile    # QuickLook, cleaners, menu bar utilities
 ```
 
 Any new `<category>.<subcategory>.Brewfile` file is picked up automatically by `brew bundle`.

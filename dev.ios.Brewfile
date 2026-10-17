@@ -9,8 +9,11 @@ cask 'xcodes-app' # Install and switch between multiple versions of Xcode | http
 brew 'xcodegen' # Generate your Xcode project from a spec file and your folder structure | https://github.com/yonaskolb/XcodeGen
 brew 'xcbeautify' # Little beautifier tool for xcodebuild | https://github.com/cpisciotta/xcbeautify
 brew 'xcode-build-server' # Build server protocol implementation for integrating Xcode with sourcekit-lsp | https://github.com/SolaWing/xcode-build-server
+brew 'fastlane' # Easiest way to build and release mobile apps | https://fastlane.tools https://github.com/fastlane/fastlane
+cask 'tuist' # Create, maintain, and interact with Xcode projects at scale | https://tuist.io/ https://github.com/tuist/tuist
 brew 'carthage' # Decentralized dependency manager for Cocoa | https://github.com/Carthage/Carthage
 brew 'cocoapods' # Dependency manager for Cocoa projects | https://cocoapods.org/ https://github.com/CocoaPods/CocoaPods
+brew 'swiftlint' # Tool to enforce Swift style and conventions | https://github.com/realm/SwiftLint
 brew 'swift-format' # Formatting technology for Swift source code | https://github.com/swiftlang/swift-format
 cask 'swiftformat-for-xcode' # Xcode Extension for reformatting Swift code | https://github.com/nicklockwood/SwiftFormat
 cask 'sf-symbols', args: { require_sha: false } # Tool that provides consistent, highly configurable symbols for apps | https://developer.apple.com/sf-symbols/

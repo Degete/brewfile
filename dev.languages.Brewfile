@@ -21,9 +21,7 @@ brew 'poetry' # Python package management tool | https://python-poetry.org https
 brew 'uv' # Extremely fast Python package installer and resolver, written in Rust | https://docs.astral.sh/uv/ https://github.com/astral-sh/uv
 brew 'pipx' # Execute binaries from Python packages in isolated environments | https://pipx.pypa.io https://github.com/pypa/pipx
 brew 'black' # Python code formatter | https://black.readthedocs.io https://github.com/psf/black
-
-# Swift
-brew 'swiftlint' # Tool to enforce Swift style and conventions | https://github.com/realm/SwiftLint
+brew 'ruff' # Extremely fast Python linter and code formatter, written in Rust | https://docs.astral.sh/ruff/ https://github.com/astral-sh/ruff
 
 # PHP
 brew 'php' # General-purpose scripting language | https://www.php.net https://github.com/php/php-src
@@ -34,6 +32,8 @@ brew 'node' # Open-source, cross-platform JavaScript runtime environment | https
 brew 'nvm' # Manage multiple Node.js versions | https://github.com/nvm-sh/nvm
 brew 'fnm' # Fast and simple Node.js version manager | https://github.com/Schniz/fnm
 brew 'bun' # Incredibly fast JavaScript runtime, bundler, test runner, and package manager | https://bun.com/ https://github.com/oven-sh/bun
+brew 'deno' # Secure runtime for JavaScript and TypeScript | https://deno.com/ https://github.com/denoland/deno
+brew 'pnpm' # Fast, disk space efficient package manager | https://pnpm.io/ https://github.com/pnpm/pnpm
 
 # .NET
 cask 'dotnet-sdk' # Developer platform | https://www.microsoft.com/net/core#macos
@@ -46,7 +46,7 @@ brew 'go' # Open source programming language to build simple/reliable/efficient 
 
 # Kotlin
 brew 'kotlin' # Statically typed programming language for the JVM | https://kotlinlang.org https://github.com/JetBrains/kotlin
-brew 'kotlin-language-server' # Intelligent Kotlin support for any editor/IDE using the Language Server Protocol | https://github.com/fwcd/kotlin-language-server
+cask 'kotlin-lsp' # Official Kotlin Language Server | https://github.com/Kotlin/kotlin-lsp
 
 # Ruby
 brew 'ruby' # Powerful, clean, object-oriented scripting language | https://www.ruby-lang.org https://github.com/ruby/ruby
@@ -60,6 +60,7 @@ brew 'rust' # Safe, concurrent, practical language | https://www.rust-lang.org/ 
 
 # Shellscript
 brew 'shellcheck' # Static analysis and lint tool, for (ba)sh scripts | https://www.shellcheck.net https://github.com/koalaman/shellcheck
+brew 'shfmt' # Autoformat shell script source code | https://github.com/mvdan/sh
 
 # YAML
 brew 'yamllint' # Linter for YAML files | https://github.com/adrienverge/yamllint

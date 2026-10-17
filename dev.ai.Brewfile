@@ -7,6 +7,7 @@ brew 'ollama' # Create, run, and share large language models (LLMs) | https://ol
 brew 'llama.cpp' # LLM inference in C/C++ | https://llama.app https://github.com/ggml-org/llama.cpp
 brew 'mlx-lm' # Run LLMs with MLX | https://github.com/ml-explore/mlx-lm
 brew 'jundot/omlx/omlx', trusted: true # LLM inference server optimized for Apple Silicon | https://github.com/jundot/omlx
+brew 'whisper.cpp' # Port of OpenAI's Whisper model (speech-to-text) in C/C++ | https://github.com/ggml-org/whisper.cpp
 brew 'llmfit' # Find what models run on your hardware | https://github.com/AlexsJones/llmfit
 cask 'lm-studio' # Discover, download, and run local LLMs | https://lmstudio.ai/
 cask 'vmlx' # Run local AI models on Apple Silicon | https://mlx.studio/ https://github.com/jjang-ai/mlxstudio
@@ -18,9 +19,12 @@ cask 'codex' # OpenAI's coding agent that runs in your terminal | https://github
 cask 'copilot-cli' # Brings the power of Copilot coding agent directly to your terminal | https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli
 brew 'anomalyco/tap/opencode-v2', trusted: true # OpenCode V2 - the AI coding agent for the terminal | https://github.com/anomalyco/opencode
 brew 'charmbracelet/tap/crush', trusted: true # A powerful terminal-based AI assistant for developers, providing intelligent coding assistance directly in your terminal. | https://charm.land/crush/ https://github.com/charmbracelet/crush
+brew 'gemini-cli' # Interact with Google Gemini AI models from the command-line | https://geminicli.com https://github.com/google-gemini/gemini-cli
+brew 'aider' # AI pair programming in your terminal | https://aider.chat/ https://github.com/Aider-AI/aider
 brew 'block-goose-cli' # Open source, extensible AI agent that goes beyond code suggestions | https://goose-docs.ai/ https://github.com/aaif-goose/goose
 brew 'herdr' # Agent multiplexer that lives in your terminal | https://herdr.dev https://github.com/herdrdev/herdr
 brew 'rtk' # CLI proxy to minimize LLM token consumption | https://www.rtk-ai.app/ https://github.com/rtk-ai/rtk
+brew 'llm' # Access large language models from the command-line | https://llm.datasette.io/ https://github.com/simonw/llm
 
 # Desktop apps
 cask 'chatgpt' # OpenAI's official ChatGPT desktop app | https://chatgpt.com/
