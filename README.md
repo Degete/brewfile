@@ -8,62 +8,63 @@
 cd ~
 git clone git@github.com:degete/brewfile.git ~/.brew
 
-# Install all packages in `Brewfile` (required taps and packages)
+cd ~/.brew
+
+# Install everything (`Brewfile` loads every `*.Brewfile` file)
 brew bundle
 
 # Selective packages by categories
 
 # Fonts
-brew bundle --file Brewfile.fonts
+brew bundle --file fonts.Brewfile
 
 # CLI
-brew bundle --file Brewfile.cli
-brew bundle --file Brewfile.cli.git
-brew bundle --file Brewfile.cli.terminals
-brew bundle --file Brewfile.cli.shells
-brew bundle --file Brewfile.cli.search
-brew bundle --file Brewfile.cli.editors
-brew bundle --file Brewfile.cli.media
-brew bundle --file Brewfile.cli.monitoring
-brew bundle --file Brewfile.cli.network
+brew bundle --file cli.Brewfile
+brew bundle --file cli.editors.Brewfile
+brew bundle --file cli.file-managers.Brewfile
+brew bundle --file cli.git.Brewfile
+brew bundle --file cli.mail.Brewfile
+brew bundle --file cli.media.Brewfile
+brew bundle --file cli.monitoring.Brewfile
+brew bundle --file cli.network.Brewfile
+brew bundle --file cli.search.Brewfile
+brew bundle --file cli.shells.Brewfile
+brew bundle --file cli.terminals.Brewfile
+brew bundle --file cli.text-generators.Brewfile
 
 # Development
-brew bundle --file Brewfile.dev.languages
-brew bundle --file Brewfile.dev.db
-brew bundle --file Brewfile.dev.ides
-brew bundle --file Brewfile.dev.devops
-brew bundle --file Brewfile.dev.ios
-brew bundle --file Brewfile.dev.android
-brew bundle --file Brewfile.dev.api
-brew bundle --file Brewfile.dev.forensic
-brew bundle --file Brewfile.dev.virtualization
+brew bundle --file dev.ai.Brewfile
+brew bundle --file dev.android.Brewfile
+brew bundle --file dev.api.Brewfile
+brew bundle --file dev.db.Brewfile
+brew bundle --file dev.devops.Brewfile
+brew bundle --file dev.forensic.Brewfile
+brew bundle --file dev.ides.Brewfile
+brew bundle --file dev.ios.Brewfile
+brew bundle --file dev.languages.Brewfile
+brew bundle --file dev.security.Brewfile
+brew bundle --file dev.virtualization.Brewfile
 
 # Apps
-brew bundle --file Brewfile.apps.macos
-brew bundle --file Brewfile.apps.browsers
-brew bundle --file Brewfile.apps.design
-brew bundle --file Brewfile.apps.office
-brew bundle --file Brewfile.apps.sns
-brew bundle --file Brewfile.apps.git
-brew bundle --file Brewfile.apps.media
-
-# Games
-brew bundle --file Brewfile.games
+brew bundle --file apps.browsers.Brewfile
+brew bundle --file apps.design.Brewfile
+brew bundle --file apps.games.Brewfile
+brew bundle --file apps.git.Brewfile
+brew bundle --file apps.macos.Brewfile
+brew bundle --file apps.media.Brewfile
+brew bundle --file apps.office.Brewfile
+brew bundle --file apps.sns.Brewfile
 ```
 
-### Avoiding dependencies
+Any new `<category>.<subcategory>.Brewfile` file is picked up automatically by `brew bundle`.
 
-In order to avoid to install some dependencies (`mas` needs to have a valid `Apple ID account` in order to install from the `Mac App Store`), you can use the following environment variables separated by space before the commands:
+Each entry has a description and its links after ` | `:
 
-- HOMEBREW_BUNDLE_TAP_SKIP
-- HOMEBREW_BUNDLE_BREW_SKIP
-- HOMEBREW_BUNDLE_CASK_SKIP
-- HOMEBREW_BUNDLE_MAS_SKIP
-- HOMEBREW_BUNDLE_WHALEBREW_SKIP
-
-```sh
-HOMEBREW_BUNDLE_MAS_SKIP brew bundle --file Brewfile.apps
+```ruby
+cask 'blender' # 3D creation suite | https://www.blender.org https://github.com/blender/blender
 ```
+
+To skip packages: `HOMEBREW_BUNDLE_CASK_SKIP="docker-desktop" brew bundle` (also `_BREW_SKIP`, `_MAS_SKIP`, `_TAP_SKIP`).
 
 ## Packages dependencies
 

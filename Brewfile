@@ -1,18 +1,9 @@
-cask_args appdir: '/Applications'
+cask_args appdir: '/Applications', require_sha: true
 
-# Homebrew core
-tap 'homebrew/core'
-# GUI macOS apps
-tap 'homebrew/cask'
-# Brew cask upgrade
-tap 'buo/cask-upgrade'
-# Alternate versions
-tap 'homebrew/cask-versions'
-# Integrates Homebrew formulae with macOS' `launchctl` manager
-tap 'homebrew/services'
-# Homebrew bundle for automation
-tap 'homebrew/bundle'
 # Mac App Store command line interface
-brew 'mas'
-# Dependency graph of Homebrew formulaes
-tap 'martido/homebrew-graph'
+brew 'mas' # Mac App Store command-line interface | https://github.com/mas-cli/mas
+
+# Loads every category file (*.Brewfile). Use ./install.sh to pick interactively.
+Dir[File.join(__dir__, '*.Brewfile')].sort.each do |file|
+  instance_eval(File.read(file), file)
+end
