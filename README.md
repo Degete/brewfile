@@ -81,10 +81,24 @@ Any new `<category>.<subcategory>.Brewfile` file is picked up automatically by `
 Each entry has a description and its links after ` | `:
 
 ```ruby
-cask 'blender' # 3D creation suite | https://www.blender.org https://github.com/blender/blender
+cask "blender" # 3D creation suite | https://www.blender.org https://github.com/blender/blender
 ```
 
 To skip packages: `HOMEBREW_BUNDLE_CASK_SKIP="docker-desktop" brew bundle` (also `_BREW_SKIP`, `_MAS_SKIP`, `_TAP_SKIP`).
+
+## Interactive picker
+
+[Bold Brew](https://github.com/Valkyrie00/bold-brew) (`bbrew`) lists the packages of a Brewfile with their status, description and version, and installs or removes them:
+
+```sh
+$ brew install bbrew
+
+$ bbrew -f ~/.brew/dev.ai.Brewfile   # One category at a time
+```
+
+`i` installs the selected package, `r` removes it, `ctrl+a` / `ctrl+r` install or remove the whole Brewfile, `?` shows every key.
+
+Opening a Brewfile with packages from a tap adds that tap (`brew tap`) right away.
 
 ## Packages dependencies
 
